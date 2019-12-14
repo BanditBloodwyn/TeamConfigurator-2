@@ -16,5 +16,10 @@ namespace TeamConfigurator_2
         {
             InitializeComponent();
         }
+
+        public bool ChangePage(string sPageName)
+        {
+            return true;
+        }
     }
 }

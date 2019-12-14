@@ -44,6 +44,7 @@
             this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Main Navigation";
+            this.label1.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Players
             // 
@@ -53,6 +54,7 @@
             this.lbl_Players.Size = new System.Drawing.Size(41, 13);
             this.lbl_Players.TabIndex = 7;
             this.lbl_Players.Text = "Players";
+            this.lbl_Players.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Teams
             // 
@@ -62,6 +64,7 @@
             this.lbl_Teams.Size = new System.Drawing.Size(39, 13);
             this.lbl_Teams.TabIndex = 8;
             this.lbl_Teams.Text = "Teams";
+            this.lbl_Teams.Click += new System.EventHandler(this.ChangePage);
             // 
             // label2
             // 
@@ -72,6 +75,7 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Analysis";
+            this.label2.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Version
             // 

@@ -23,5 +23,32 @@ namespace TeamConfigurator_2.Controls
         {
             lbl_Version.Text = Application.ProductVersion;
         }
+
+        private void ChangePage(object sender, EventArgs e)
+        {
+            MainPage oParent = this.ParentForm as MainPage;
+            Label oLabel = sender as Label;
+            string sPageName = "";
+
+            switch (oLabel.Name)
+            {
+                case "label1":
+                    break;
+
+                case "lbl_Players":
+                    break;
+
+                case "lbl_Teams":
+                    break;
+
+                case "label2":
+                    break;
+
+                case "lbl_Version":
+                    break;
+            }
+
+            oParent.ChangePage(sPageName);
+        }
     }
 }

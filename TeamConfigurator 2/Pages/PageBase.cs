@@ -21,7 +21,7 @@ namespace TeamConfigurator_2.Pages
 
         public virtual void Initialize(string sPageName)
         {
-
+            m_sPageName = sPageName;
         }
     }
 }
