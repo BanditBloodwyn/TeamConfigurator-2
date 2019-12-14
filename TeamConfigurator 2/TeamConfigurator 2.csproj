@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Team.cs" />
+    <Compile Include="Controls\Navigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
