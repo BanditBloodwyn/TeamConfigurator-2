@@ -64,6 +64,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
@@ -75,9 +77,10 @@
             this.playedMatchesDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.playersBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 30);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(843, 422);
+            this.dataGridView1.Size = new System.Drawing.Size(797, 429);
             this.dataGridView1.TabIndex = 0;
             // 
             // nameDataGridViewTextBoxColumn
@@ -85,48 +88,56 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 60;
             // 
             // ageDataGridViewTextBoxColumn
             // 
             this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
             this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
             this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.Width = 51;
             // 
             // sexDataGridViewTextBoxColumn
             // 
             this.sexDataGridViewTextBoxColumn.DataPropertyName = "Sex";
             this.sexDataGridViewTextBoxColumn.HeaderText = "Sex";
             this.sexDataGridViewTextBoxColumn.Name = "sexDataGridViewTextBoxColumn";
+            this.sexDataGridViewTextBoxColumn.Width = 50;
             // 
             // lPZDataGridViewTextBoxColumn
             // 
             this.lPZDataGridViewTextBoxColumn.DataPropertyName = "LPZ";
             this.lPZDataGridViewTextBoxColumn.HeaderText = "LPZ";
             this.lPZDataGridViewTextBoxColumn.Name = "lPZDataGridViewTextBoxColumn";
+            this.lPZDataGridViewTextBoxColumn.Width = 52;
             // 
             // blockedDataGridViewCheckBoxColumn
             // 
             this.blockedDataGridViewCheckBoxColumn.DataPropertyName = "Blocked";
             this.blockedDataGridViewCheckBoxColumn.HeaderText = "Blocked";
             this.blockedDataGridViewCheckBoxColumn.Name = "blockedDataGridViewCheckBoxColumn";
+            this.blockedDataGridViewCheckBoxColumn.Width = 52;
             // 
             // availabilityDataGridViewTextBoxColumn
             // 
             this.availabilityDataGridViewTextBoxColumn.DataPropertyName = "Availability";
             this.availabilityDataGridViewTextBoxColumn.HeaderText = "Availability";
             this.availabilityDataGridViewTextBoxColumn.Name = "availabilityDataGridViewTextBoxColumn";
+            this.availabilityDataGridViewTextBoxColumn.Width = 81;
             // 
             // playedMatchesDataGridViewTextBoxColumn
             // 
             this.playedMatchesDataGridViewTextBoxColumn.DataPropertyName = "PlayedMatches";
             this.playedMatchesDataGridViewTextBoxColumn.HeaderText = "PlayedMatches";
             this.playedMatchesDataGridViewTextBoxColumn.Name = "playedMatchesDataGridViewTextBoxColumn";
+            this.playedMatchesDataGridViewTextBoxColumn.Width = 105;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Width = 63;
             // 
             // playersBindingSource
             // 
@@ -167,7 +178,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(851, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(797, 25);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -263,7 +274,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PlayerListPage";
-            this.Size = new System.Drawing.Size(851, 457);
+            this.Size = new System.Drawing.Size(797, 457);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tC_DatabaseDataSet)).EndInit();
