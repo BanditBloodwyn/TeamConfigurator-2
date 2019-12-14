@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.navigation1 = new TeamConfigurator_2.Controls.Navigation();
+            this.SuspendLayout();
+            // 
+            // navigation1
+            // 
+            this.navigation1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.navigation1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.navigation1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navigation1.Location = new System.Drawing.Point(0, 0);
+            this.navigation1.Name = "navigation1";
+            this.navigation1.Size = new System.Drawing.Size(186, 450);
+            this.navigation1.TabIndex = 0;
+            // 
+            // MainPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.navigation1);
+            this.Name = "MainPage";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Controls.Navigation navigation1;
     }
 }
 

@@ -8,20 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TeamConfigurator_2.Controls
+namespace TeamConfigurator_2.Pages
 {
-    public partial class Navigation : UserControl
+    public partial class PageBase : UserControl
     {
-        public Navigation()
+        private string m_sPageName;
+
+        public PageBase()
         {
             InitializeComponent();
-
-            Initialize();
         }
 
-        private void Initialize()
+        public virtual void Initialize(string sPageName)
         {
-            lbl_Version.Text = Application.ProductVersion;
+
         }
     }
 }
