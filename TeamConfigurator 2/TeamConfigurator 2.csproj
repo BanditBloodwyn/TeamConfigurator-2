@@ -82,6 +82,12 @@
     <Compile Include="Pages\PageBase.Designer.cs">
       <DependentUpon>PageBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TeamListPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\TeamListPage.Designer.cs">
+      <DependentUpon>TeamListPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PlayerListPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,11 +101,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TC_DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TC_TeamsDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Controls\Navigation.resx">
       <DependentUpon>Navigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TeamListPage.resx">
+      <DependentUpon>TeamListPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\PlayerListPage.resx">
       <DependentUpon>PlayerListPage.cs</DependentUpon>
@@ -132,6 +146,17 @@
     </None>
     <None Include="TC_DatabaseDataSet.xss">
       <DependentUpon>TC_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TC_TeamsDB.xsc">
+      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
+    </None>
+    <None Include="TC_TeamsDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TC_TeamsDB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TC_TeamsDB.xss">
+      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
