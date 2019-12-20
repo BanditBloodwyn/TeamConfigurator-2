@@ -17,9 +17,9 @@ namespace TeamConfigurator_2.Pages
             InitializeComponent();
         }
 
-        public override void Initialize(string sPageName)
+        public override void Initialize()
         {
-            base.Initialize(sPageName);
+            base.Initialize();
         }
     }
 }

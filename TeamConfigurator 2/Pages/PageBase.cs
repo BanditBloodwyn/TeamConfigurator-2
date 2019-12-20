@@ -12,16 +12,14 @@ namespace TeamConfigurator_2.Pages
 {
     public partial class PageBase : UserControl, IPage
     {
-        private string m_sPageName;
-
         public PageBase()
         {
             InitializeComponent();
         }
 
-        public virtual void Initialize(string sPageName)
+        public virtual void Initialize()
         {
-            m_sPageName = sPageName;
+
         }
 
         public virtual void DeactivatePage()

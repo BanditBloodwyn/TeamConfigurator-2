@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeamConfigurator_2.Services;
+using TeamConfigurator_2.Pages;
 
 namespace TeamConfigurator_2
 {
@@ -20,11 +21,13 @@ namespace TeamConfigurator_2
             InitializeComponent();
 
             ms_PageHandler = new PageHandler(panel_PagePanel);
+            ms_PageHandler.CreatePage("Teams", new TeamListPage());
+            ms_PageHandler.CreatePage("Players", new PlayerListPage());
         }
 
         public bool ChangePage(string sPageName)
         {
-            return true;
+            return ms_PageHandler.ShowPage(sPageName);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TeamConfigurator_2.Services
             }
         }
 
-        public bool CreatePage(string sPageName, UserControl page, bool bIsStartPage)
+        public bool CreatePage(string sPageName, UserControl page, bool bIsStartPage = false)
         {
             if(m_dictPages.ContainsKey(sPageName))
             {
@@ -104,6 +104,16 @@ namespace TeamConfigurator_2.Services
             (m_CurrentPage as IPage).ActivatePage();
 
             return true;
+        }
+
+        public bool ShowPage(string sPageName)
+        {
+            if(m_dictPages.ContainsKey(sPageName))
+            {
+                ShowPage(m_dictPages[sPageName]);
+                return true;
+            }
+            return false;
         }
 
         public bool ShowLastPage(int index)

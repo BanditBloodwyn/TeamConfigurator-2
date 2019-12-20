@@ -36,9 +36,11 @@ namespace TeamConfigurator_2.Controls
                     break;
 
                 case "lbl_Players":
+                    oParent.ChangePage("Players");
                     break;
 
                 case "lbl_Teams":
+                    oParent.ChangePage("Teams");
                     break;
 
                 case "label2":
