@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.navigation1 = new TeamConfigurator_2.Controls.Navigation();
             this.panel_PagePanel = new System.Windows.Forms.Panel();
+            this.navigation1 = new TeamConfigurator_2.Controls.Navigation();
             this.SuspendLayout();
+            // 
+            // panel_PagePanel
+            // 
+            this.panel_PagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_PagePanel.BackColor = System.Drawing.Color.Transparent;
+            this.panel_PagePanel.Location = new System.Drawing.Point(183, 0);
+            this.panel_PagePanel.Name = "panel_PagePanel";
+            this.panel_PagePanel.Size = new System.Drawing.Size(983, 648);
+            this.panel_PagePanel.TabIndex = 1;
             // 
             // navigation1
             // 
@@ -41,13 +52,6 @@
             this.navigation1.Name = "navigation1";
             this.navigation1.Size = new System.Drawing.Size(183, 648);
             this.navigation1.TabIndex = 0;
-            // 
-            // panel_PagePanel
-            // 
-            this.panel_PagePanel.Location = new System.Drawing.Point(183, 0);
-            this.panel_PagePanel.Name = "panel_PagePanel";
-            this.panel_PagePanel.Size = new System.Drawing.Size(983, 648);
-            this.panel_PagePanel.TabIndex = 1;
             // 
             // MainPage
             // 

@@ -193,6 +193,9 @@
             // 
             // teamsDataGridView
             // 
+            this.teamsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.teamsDataGridView.AutoGenerateColumns = false;
             this.teamsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.teamsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
