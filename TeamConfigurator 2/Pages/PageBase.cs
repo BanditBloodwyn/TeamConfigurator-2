@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TeamConfigurator_2.Pages
 {
-    public partial class PageBase : UserControl
+    public partial class PageBase : UserControl, IPage
     {
         private string m_sPageName;
 
@@ -23,5 +23,21 @@ namespace TeamConfigurator_2.Pages
         {
             m_sPageName = sPageName;
         }
+
+        public virtual void DeactivatePage()
+        {
+
+        }
+
+        public virtual void ActivatePage()
+        {
+
+        }
+
+        public virtual void InitializePage()
+        {
+
+        }
+
     }
 }

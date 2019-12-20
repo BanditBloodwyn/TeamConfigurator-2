@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.navigation1 = new TeamConfigurator_2.Controls.Navigation();
+            this.panel_PagePanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // navigation1
@@ -38,14 +39,22 @@
             this.navigation1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navigation1.Location = new System.Drawing.Point(0, 0);
             this.navigation1.Name = "navigation1";
-            this.navigation1.Size = new System.Drawing.Size(186, 648);
+            this.navigation1.Size = new System.Drawing.Size(183, 648);
             this.navigation1.TabIndex = 0;
+            // 
+            // panel_PagePanel
+            // 
+            this.panel_PagePanel.Location = new System.Drawing.Point(183, 0);
+            this.panel_PagePanel.Name = "panel_PagePanel";
+            this.panel_PagePanel.Size = new System.Drawing.Size(983, 648);
+            this.panel_PagePanel.TabIndex = 1;
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 648);
+            this.Controls.Add(this.panel_PagePanel);
             this.Controls.Add(this.navigation1);
             this.Name = "MainPage";
             this.Text = "Form1";
@@ -56,6 +65,7 @@
         #endregion
 
         private Controls.Navigation navigation1;
+        private System.Windows.Forms.Panel panel_PagePanel;
     }
 }
 
