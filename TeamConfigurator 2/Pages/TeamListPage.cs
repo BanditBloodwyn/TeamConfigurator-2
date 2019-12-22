@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TeamConfigurator_2.Pages
 {
-    public partial class TeamListPage : PageBase
+    public partial class TeamListPage : PageBase, IPage
     {
         public TeamListPage()
         {

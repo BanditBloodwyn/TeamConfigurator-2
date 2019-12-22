@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TeamConfigurator_2.Pages
 {
-    public partial class PageBase : UserControl, IPage
+    public partial class PageBase : UserControl
     {
         public PageBase()
         {
@@ -36,6 +36,5 @@ namespace TeamConfigurator_2.Pages
         {
 
         }
-
     }
 }

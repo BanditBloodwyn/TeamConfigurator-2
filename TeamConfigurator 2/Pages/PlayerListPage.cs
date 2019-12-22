@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TeamConfigurator_2.Pages
 {
-    public partial class PlayerListPage : PageBase
+    public partial class PlayerListPage : PageBase, IPage
     {
         public PlayerListPage()
         {
@@ -20,6 +20,16 @@ namespace TeamConfigurator_2.Pages
         public override void Initialize()
         {
             base.Initialize();
+        }
+
+        public override void DeactivatePage()
+        {
+            base.DeactivatePage();
+        }
+
+        public override void ActivatePage()
+        {
+            base.ActivatePage();
         }
     }
 }

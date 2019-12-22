@@ -51,9 +51,9 @@
             this.lbl_Players.AutoSize = true;
             this.lbl_Players.Location = new System.Drawing.Point(40, 80);
             this.lbl_Players.Name = "lbl_Players";
-            this.lbl_Players.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Players.Size = new System.Drawing.Size(51, 13);
             this.lbl_Players.TabIndex = 7;
-            this.lbl_Players.Text = "Players";
+            this.lbl_Players.Text = "Player list";
             this.lbl_Players.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Teams
@@ -61,9 +61,9 @@
             this.lbl_Teams.AutoSize = true;
             this.lbl_Teams.Location = new System.Drawing.Point(40, 100);
             this.lbl_Teams.Name = "lbl_Teams";
-            this.lbl_Teams.Size = new System.Drawing.Size(39, 13);
+            this.lbl_Teams.Size = new System.Drawing.Size(49, 13);
             this.lbl_Teams.TabIndex = 8;
-            this.lbl_Teams.Text = "Teams";
+            this.lbl_Teams.Text = "Team list";
             this.lbl_Teams.Click += new System.EventHandler(this.ChangePage);
             // 
             // label2
