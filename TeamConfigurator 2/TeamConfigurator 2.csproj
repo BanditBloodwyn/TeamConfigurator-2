@@ -98,16 +98,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PageHandler.cs" />
-    <Compile Include="TC_DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TC_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TC_TeamsDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Controls\Navigation.resx">
       <DependentUpon>Navigation.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,40 +128,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TC_DatabaseDataSet.xsc">
-      <DependentUpon>TC_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TC_DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TC_DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TC_DatabaseDataSet.xss">
-      <DependentUpon>TC_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TC_TeamsDB.xsc">
-      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
-    </None>
-    <None Include="TC_TeamsDB.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TC_TeamsDB.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TC_TeamsDB.xss">
-      <DependentUpon>TC_TeamsDB.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TC_Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TC_Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>TC_Database.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
