@@ -9,9 +9,9 @@ namespace TeamConfigurator_2.Classes
     class Player
     {
         private string m_sName;
-        private int m_unAge;
+        private int m_unBirthYear;
         private string m_cSex;
-        private int m_nLPZ;
+        private string m_nLPZ;
         private bool m_bBlocked;
         private int m_nAvailability = 100;
         private int m_unPlayedMatches;
@@ -24,17 +24,17 @@ namespace TeamConfigurator_2.Classes
             get { return m_sName; }
             set { m_sName = value; }
         }
-        public int Age
+        public int BirthYear
         {
-            get { return m_unAge; }
-            set { m_unAge = value; }
+            get { return m_unBirthYear; }
+            set { m_unBirthYear = value; }
         }
         public string Sex
         {
             get { return m_cSex; }
             set { m_cSex = value; }
         }
-        public int LPZ
+        public string LPZ
         {
             get { return m_nLPZ; }
             set { m_nLPZ = value; }

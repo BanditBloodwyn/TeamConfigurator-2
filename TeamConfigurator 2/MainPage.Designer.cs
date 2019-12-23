@@ -37,7 +37,7 @@
             this.panel_PagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_PagePanel.BackColor = System.Drawing.Color.Transparent;
+            this.panel_PagePanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel_PagePanel.Location = new System.Drawing.Point(183, 0);
             this.panel_PagePanel.Name = "panel_PagePanel";
             this.panel_PagePanel.Size = new System.Drawing.Size(983, 648);

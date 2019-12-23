@@ -70,6 +70,12 @@
     <Compile Include="Controls\Navigation.Designer.cs">
       <DependentUpon>Navigation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Popups\URLPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Popups\URLPopup.Designer.cs">
+      <DependentUpon>URLPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces.cs" />
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
@@ -97,9 +103,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\PageHandler.cs" />
     <EmbeddedResource Include="Controls\Navigation.resx">
       <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Popups\URLPopup.resx">
+      <DependentUpon>URLPopup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
