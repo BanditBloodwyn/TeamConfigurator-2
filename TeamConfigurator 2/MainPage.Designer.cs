@@ -62,6 +62,7 @@
             this.Controls.Add(this.navigation1);
             this.Name = "MainPage";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

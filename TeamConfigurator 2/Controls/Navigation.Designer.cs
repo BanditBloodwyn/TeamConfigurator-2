@@ -70,9 +70,9 @@
             // btn_PlayerList
             // 
             this.btn_PlayerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PlayerList.Location = new System.Drawing.Point(0, 41);
+            this.btn_PlayerList.Location = new System.Drawing.Point(-2, 41);
             this.btn_PlayerList.Name = "btn_PlayerList";
-            this.btn_PlayerList.Size = new System.Drawing.Size(200, 60);
+            this.btn_PlayerList.Size = new System.Drawing.Size(204, 60);
             this.btn_PlayerList.TabIndex = 11;
             this.btn_PlayerList.Text = "Player List";
             this.btn_PlayerList.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // btn_TeamList
             // 
             this.btn_TeamList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TeamList.Location = new System.Drawing.Point(0, 100);
+            this.btn_TeamList.Location = new System.Drawing.Point(-2, 100);
             this.btn_TeamList.Name = "btn_TeamList";
-            this.btn_TeamList.Size = new System.Drawing.Size(200, 60);
+            this.btn_TeamList.Size = new System.Drawing.Size(204, 60);
             this.btn_TeamList.TabIndex = 12;
             this.btn_TeamList.Text = "Team List";
             this.btn_TeamList.UseVisualStyleBackColor = true;

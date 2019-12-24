@@ -18,6 +18,7 @@ namespace TeamConfigurator_2.Pages
         public PlayerListPage()
         {
             InitializeComponent();
+            Initialize();
         }
 
         public override void Initialize()
@@ -37,17 +38,7 @@ namespace TeamConfigurator_2.Pages
 
         private void UpdateList()
         {
-            listView1.Items.Clear();
-
-            foreach(Player oPlayer in DataService.Players.Values)
-            {
-                ListViewItem lviPlayer = new ListViewItem();
-                lviPlayer.Tag = oPlayer;
-                lviPlayer.Text = oPlayer.Name;
-                lviPlayer.SubItems.Add(Convert.ToString(oPlayer.LPZ));
-
-                listView1.Items.Add(lviPlayer);
-            }
+            olv_Players.SetObjects(DataService.Players.Values);
         }
 
         private void UpdatePage()

@@ -15,11 +15,23 @@ namespace TeamConfigurator_2.Pages
         public TeamListPage()
         {
             InitializeComponent();
+            Initialize();
         }
 
         public override void Initialize()
         {
             base.Initialize();
         }
+
+        private void UpdateList()
+        {
+
+        }
+
+        private void UpdatePage()
+        {
+
+        }
+
     }
 }

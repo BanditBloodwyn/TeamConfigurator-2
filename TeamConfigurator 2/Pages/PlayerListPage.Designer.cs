@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.btn_LoadFromTTLive = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.column_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_LPZ = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_DateTime = new System.Windows.Forms.Label();
+            this.olv_Players = new BrightIdeasSoftware.ObjectListView();
+            this.col_Name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.col_LPZ = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            ((System.ComponentModel.ISupportInitialize)(this.olv_Players)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_LoadFromTTLive
@@ -49,37 +50,6 @@
             this.btn_LoadFromTTLive.UseVisualStyleBackColor = false;
             this.btn_LoadFromTTLive.Click += new System.EventHandler(this.btn_LoadFromTTLive_Click);
             // 
-            // listView1
-            // 
-            this.listView1.AllowColumnReorder = true;
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.column_Name,
-            this.column_LPZ});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.HoverSelection = true;
-            this.listView1.Location = new System.Drawing.Point(0, 56);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(643, 401);
-            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // column_Name
-            // 
-            this.column_Name.Text = "Name";
-            this.column_Name.Width = 240;
-            // 
-            // column_LPZ
-            // 
-            this.column_LPZ.Text = "LPZ";
-            // 
             // lbl_DateTime
             // 
             this.lbl_DateTime.AutoSize = true;
@@ -89,16 +59,51 @@
             this.lbl_DateTime.TabIndex = 3;
             this.lbl_DateTime.Text = "[Update Time]";
             // 
+            // olv_Players
+            // 
+            this.olv_Players.AllColumns.Add(this.col_Name);
+            this.olv_Players.AllColumns.Add(this.col_LPZ);
+            this.olv_Players.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.olv_Players.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.olv_Players.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.olv_Players.CellEditUseWholeCell = false;
+            this.olv_Players.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.col_Name,
+            this.col_LPZ});
+            this.olv_Players.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_Players.HideSelection = false;
+            this.olv_Players.Location = new System.Drawing.Point(0, 56);
+            this.olv_Players.Name = "olv_Players";
+            this.olv_Players.Size = new System.Drawing.Size(643, 401);
+            this.olv_Players.TabIndex = 4;
+            this.olv_Players.UseCompatibleStateImageBehavior = false;
+            this.olv_Players.View = System.Windows.Forms.View.Details;
+            // 
+            // col_Name
+            // 
+            this.col_Name.AspectName = "Name";
+            this.col_Name.Text = "Name";
+            this.col_Name.UseInitialLetterForGroup = true;
+            this.col_Name.Width = 240;
+            // 
+            // col_LPZ
+            // 
+            this.col_LPZ.AspectName = "LPZ";
+            this.col_LPZ.Text = "LPZ";
+            // 
             // PlayerListPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Controls.Add(this.olv_Players);
             this.Controls.Add(this.lbl_DateTime);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btn_LoadFromTTLive);
             this.Name = "PlayerListPage";
             this.Size = new System.Drawing.Size(797, 457);
+            ((System.ComponentModel.ISupportInitialize)(this.olv_Players)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,9 +111,9 @@
 
         #endregion
         private System.Windows.Forms.Button btn_LoadFromTTLive;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader column_Name;
-        private System.Windows.Forms.ColumnHeader column_LPZ;
         private System.Windows.Forms.Label lbl_DateTime;
+        private BrightIdeasSoftware.ObjectListView olv_Players;
+        private BrightIdeasSoftware.OLVColumn col_Name;
+        private BrightIdeasSoftware.OLVColumn col_LPZ;
     }
 }

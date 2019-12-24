@@ -15,6 +15,7 @@ namespace TeamConfigurator_2.Services
         private static string m_sLoadDate = "";
         private static string m_sLoadTime = "";
         private static Dictionary<string, Player> m_dictPlayers = null;
+        private static Dictionary<string, Team> m_dictTeams = null;
 
         private static XDocument m_oXDoc = null;
 
@@ -36,7 +37,21 @@ namespace TeamConfigurator_2.Services
 
         public static Dictionary<string, Player> Players
         {
-            get { return m_dictPlayers; }
+            get 
+            {
+                if (m_dictPlayers == null)
+                    m_dictPlayers = new Dictionary<string, Player>();
+                return m_dictPlayers; 
+            }
+        }
+        public static Dictionary<string, Team> Teams
+        {
+            get
+            {
+                if (m_dictTeams == null)
+                    m_dictTeams = new Dictionary<string, Team>();
+                return m_dictTeams;
+            }
         }
 
         public static bool LoadPlayersFromURL()
@@ -47,9 +62,7 @@ namespace TeamConfigurator_2.Services
         public static bool LoadPlayersFromURL(string sExportKey)
         {
             m_sExportKey = sExportKey;
-            if (m_dictPlayers == null)
-                m_dictPlayers = new Dictionary<string, Player>();
-            m_dictPlayers.Clear();
+            Players.Clear();
 
             try
             {
