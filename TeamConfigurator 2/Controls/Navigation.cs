@@ -27,19 +27,19 @@ namespace TeamConfigurator_2.Controls
         private void ChangePage(object sender, EventArgs e)
         {
             MainPage oParent = this.ParentForm as MainPage;
-            Label oLabel = sender as Label;
+            Control oButton = sender as Control;
             string sPageName = "";
 
-            switch (oLabel.Name)
+            switch (oButton.Name)
             {
                 case "label1":
                     break;
 
-                case "lbl_Players":
+                case "btn_PlayerList":
                     oParent.ChangePage("Players");
                     break;
 
-                case "lbl_Teams":
+                case "btn_TeamList":
                     oParent.ChangePage("Teams");
                     break;
 

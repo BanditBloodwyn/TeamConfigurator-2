@@ -51,28 +51,42 @@ namespace TeamConfigurator_2.Services
                 m_dictPlayers = new Dictionary<string, Player>();
             m_dictPlayers.Clear();
 
-            m_oXDoc = XDocument.Load("https://dresden-stadt.tischtennislive.de/Export/default.aspx?SpartenID=1782&Format=XML&SportArt=96&Area=VereinLivePZ&ExportKey=" + sExportKey);
-
-            if(m_oXDoc == null)
-                return false;
-
-            m_sLoadDate = (string)m_oXDoc.Root.Element("Datum");
-            m_sLoadTime = (string)m_oXDoc.Root.Element("Zeit");
-
-            foreach (XElement element in m_oXDoc.Root
-                            .Element("Content")
-                            .Elements("Spieler"))
+            try
             {
-                Player oPlayer = new Player();
-                oPlayer.Name = (string)element.Element("Spielername");
-                oPlayer.BirthYear = (int)element.Element("Gebdatum");
-                oPlayer.Sex = (string)element.Element("Geschlecht");
-                oPlayer.LPZ = (string)element.Element("LivePZ");
+                m_oXDoc = XDocument.Load("https://dresden-stadt.tischtennislive.de/Export/default.aspx?SpartenID=1782&Format=XML&SportArt=96&Area=VereinLivePZ&ExportKey=" + sExportKey);
 
-                m_dictPlayers.Add(oPlayer.Name, oPlayer);
+                if (m_oXDoc == null)
+                    return false;
+
+                m_sLoadDate = (string)m_oXDoc.Root.Element("Datum");
+                m_sLoadTime = (string)m_oXDoc.Root.Element("Zeit");
+
+                foreach (XElement element in m_oXDoc.Root
+                                .Element("Content")
+                                .Elements("Spieler"))
+                {
+                    Player oPlayer = new Player();
+                    oPlayer.Name = (string)element.Element("Spielername");
+                    oPlayer.BirthYear = (int)element.Element("Gebdatum");
+                    oPlayer.Sex = (string)element.Element("Geschlecht");
+                    oPlayer.LPZ = (string)element.Element("LivePZ");
+
+                    m_dictPlayers.Add(oPlayer.Name, oPlayer);
+                }
+
+                return true;
+            }
+            catch(System.Net.WebException)
+            {
+                Console.WriteLine("Website not reachable!");
+                return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception! \n Source: {0} \n Message: {1} \n Type: \n {2} \n StackTrace:{3}", e.Source, e.Message, e.GetType(), e.StackTrace);
+                return false;
             }
 
-            return true;
         }
     }
 }
