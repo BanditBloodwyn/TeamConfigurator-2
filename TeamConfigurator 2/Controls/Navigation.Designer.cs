@@ -37,24 +37,24 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 18);
+            this.label1.Location = new System.Drawing.Point(-2, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.Size = new System.Drawing.Size(204, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Lists";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.ChangePage);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 236);
+            this.label2.Location = new System.Drawing.Point(-2, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(202, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "Analysis";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Version
@@ -63,7 +63,7 @@
             this.lbl_Version.AutoSize = true;
             this.lbl_Version.Location = new System.Drawing.Point(3, 413);
             this.lbl_Version.Name = "lbl_Version";
-            this.lbl_Version.Size = new System.Drawing.Size(54, 15);
+            this.lbl_Version.Size = new System.Drawing.Size(48, 13);
             this.lbl_Version.TabIndex = 10;
             this.lbl_Version.Text = "[Version]";
             // 
