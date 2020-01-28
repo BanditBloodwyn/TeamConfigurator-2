@@ -11,7 +11,7 @@ namespace TeamConfigurator_2.Classes
         private string m_sName;
         private int m_unBirthYear;
         private string m_cSex;
-        private string m_nLPZ;
+        private int m_nLPZ;
         private bool m_bBlocked;
         private int m_nAvailability = 100;
         private int m_unPlayedMatches;
@@ -34,7 +34,7 @@ namespace TeamConfigurator_2.Classes
             get { return m_cSex; }
             set { m_cSex = value; }
         }
-        public string LPZ
+        public int LPZ
         {
             get { return m_nLPZ; }
             set { m_nLPZ = value; }

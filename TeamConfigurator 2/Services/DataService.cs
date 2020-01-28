@@ -82,7 +82,19 @@ namespace TeamConfigurator_2.Services
                     oPlayer.Name = (string)element.Element("Spielername");
                     oPlayer.BirthYear = (int)element.Element("Gebdatum");
                     oPlayer.Sex = (string)element.Element("Geschlecht");
-                    oPlayer.LPZ = (string)element.Element("LivePZ");
+
+                    string sLPZTemp = (string)element.Element("LivePZ");
+                    char[] cTemp = { '[', ']', '*', ' ' };
+                    sLPZTemp = sLPZTemp.Trim(cTemp);
+
+                    if(sLPZTemp == "k.A.")
+                    {
+                        oPlayer.LPZ = 0;
+                    }
+                    else
+                    {
+                        oPlayer.LPZ = Convert.ToInt32(sLPZTemp);
+                    }
 
                     m_dictPlayers.Add(oPlayer.Name, oPlayer);
                 }

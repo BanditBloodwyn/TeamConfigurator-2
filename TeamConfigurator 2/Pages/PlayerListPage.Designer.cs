@@ -55,7 +55,7 @@
             this.lbl_DateTime.AutoSize = true;
             this.lbl_DateTime.Location = new System.Drawing.Point(4, 4);
             this.lbl_DateTime.Name = "lbl_DateTime";
-            this.lbl_DateTime.Size = new System.Drawing.Size(84, 15);
+            this.lbl_DateTime.Size = new System.Drawing.Size(74, 13);
             this.lbl_DateTime.TabIndex = 3;
             this.lbl_DateTime.Text = "[Update Time]";
             // 
@@ -73,10 +73,12 @@
             this.col_Name,
             this.col_LPZ});
             this.olv_Players.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_Players.FullRowSelect = true;
             this.olv_Players.HideSelection = false;
             this.olv_Players.Location = new System.Drawing.Point(0, 56);
             this.olv_Players.Name = "olv_Players";
             this.olv_Players.Size = new System.Drawing.Size(643, 401);
+            this.olv_Players.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.olv_Players.TabIndex = 4;
             this.olv_Players.UseCompatibleStateImageBehavior = false;
             this.olv_Players.View = System.Windows.Forms.View.Details;
@@ -91,6 +93,7 @@
             // col_LPZ
             // 
             this.col_LPZ.AspectName = "LPZ";
+            this.col_LPZ.FillsFreeSpace = true;
             this.col_LPZ.Text = "LPZ";
             // 
             // PlayerListPage
