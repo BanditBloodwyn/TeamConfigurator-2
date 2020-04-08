@@ -36,11 +36,11 @@ namespace TeamConfigurator_2.Controls
                     break;
 
                 case "btn_PlayerList":
-                    oParent.ChangePage("Players");
+                    oParent.ChangePage("Player List");
                     break;
 
                 case "btn_TeamList":
-                    oParent.ChangePage("Teams");
+                    oParent.ChangePage("Team List");
                     break;
 
                 case "label2":

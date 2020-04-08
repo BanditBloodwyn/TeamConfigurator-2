@@ -28,30 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_PagePanel = new System.Windows.Forms.Panel();
             this.navigation1 = new TeamConfigurator_2.Controls.Navigation();
+            this.panel_PagePanel = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel_PagePanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // navigation1
+            // 
+            this.navigation1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.navigation1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.navigation1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navigation1.Location = new System.Drawing.Point(0, 0);
+            this.navigation1.Name = "navigation1";
+            this.navigation1.Size = new System.Drawing.Size(187, 648);
+            this.navigation1.TabIndex = 0;
             // 
             // panel_PagePanel
             // 
             this.panel_PagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_PagePanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel_PagePanel.Location = new System.Drawing.Point(183, 0);
+            this.panel_PagePanel.Controls.Add(this.tabPage1);
+            this.panel_PagePanel.Controls.Add(this.tabPage2);
+            this.panel_PagePanel.Location = new System.Drawing.Point(189, 0);
             this.panel_PagePanel.Name = "panel_PagePanel";
-            this.panel_PagePanel.Size = new System.Drawing.Size(983, 648);
+            this.panel_PagePanel.SelectedIndex = 0;
+            this.panel_PagePanel.Size = new System.Drawing.Size(977, 648);
             this.panel_PagePanel.TabIndex = 1;
             // 
-            // navigation1
+            // tabPage1
             // 
-            this.navigation1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.navigation1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.navigation1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navigation1.Location = new System.Drawing.Point(0, 0);
-            this.navigation1.Name = "navigation1";
-            this.navigation1.Size = new System.Drawing.Size(183, 648);
-            this.navigation1.TabIndex = 0;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(969, 622);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(969, 622);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 
@@ -63,6 +88,7 @@
             this.Name = "MainPage";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.panel_PagePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -70,7 +96,9 @@
         #endregion
 
         private Controls.Navigation navigation1;
-        private System.Windows.Forms.Panel panel_PagePanel;
+        private System.Windows.Forms.TabControl panel_PagePanel;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 

@@ -41,7 +41,7 @@
             this.olv_Teams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.olv_Teams.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.olv_Teams.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.olv_Teams.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.olv_Teams.CellEditUseWholeCell = false;
             this.olv_Teams.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -49,9 +49,9 @@
             this.col_LPZ});
             this.olv_Teams.Cursor = System.Windows.Forms.Cursors.Default;
             this.olv_Teams.HideSelection = false;
-            this.olv_Teams.Location = new System.Drawing.Point(0, 56);
+            this.olv_Teams.Location = new System.Drawing.Point(3, 56);
             this.olv_Teams.Name = "olv_Teams";
-            this.olv_Teams.Size = new System.Drawing.Size(643, 401);
+            this.olv_Teams.Size = new System.Drawing.Size(640, 401);
             this.olv_Teams.TabIndex = 5;
             this.olv_Teams.UseCompatibleStateImageBehavior = false;
             this.olv_Teams.View = System.Windows.Forms.View.Details;
@@ -70,9 +70,7 @@
             // 
             // TeamListPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.olv_Teams);
             this.Name = "TeamListPage";
             this.Size = new System.Drawing.Size(797, 457);

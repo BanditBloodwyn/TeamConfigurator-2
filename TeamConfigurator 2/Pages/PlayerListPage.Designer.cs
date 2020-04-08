@@ -39,9 +39,9 @@
             // btn_LoadFromTTLive
             // 
             this.btn_LoadFromTTLive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_LoadFromTTLive.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_LoadFromTTLive.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btn_LoadFromTTLive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LoadFromTTLive.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_LoadFromTTLive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_LoadFromTTLive.Location = new System.Drawing.Point(649, 4);
             this.btn_LoadFromTTLive.Name = "btn_LoadFromTTLive";
             this.btn_LoadFromTTLive.Size = new System.Drawing.Size(145, 52);
@@ -66,7 +66,7 @@
             this.olv_Players.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.olv_Players.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.olv_Players.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.olv_Players.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.olv_Players.CellEditUseWholeCell = false;
             this.olv_Players.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -75,9 +75,9 @@
             this.olv_Players.Cursor = System.Windows.Forms.Cursors.Default;
             this.olv_Players.FullRowSelect = true;
             this.olv_Players.HideSelection = false;
-            this.olv_Players.Location = new System.Drawing.Point(0, 56);
+            this.olv_Players.Location = new System.Drawing.Point(3, 56);
             this.olv_Players.Name = "olv_Players";
-            this.olv_Players.Size = new System.Drawing.Size(643, 401);
+            this.olv_Players.Size = new System.Drawing.Size(640, 401);
             this.olv_Players.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.olv_Players.TabIndex = 4;
             this.olv_Players.UseCompatibleStateImageBehavior = false;
@@ -98,9 +98,7 @@
             // 
             // PlayerListPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.olv_Players);
             this.Controls.Add(this.lbl_DateTime);
             this.Controls.Add(this.btn_LoadFromTTLive);

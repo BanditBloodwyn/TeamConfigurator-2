@@ -13,29 +13,30 @@ namespace TeamConfigurator_2.Services
         /// <summary>
         /// The control used to display the content of the page
         /// </summary>
-        private Panel m_PagePanel;
+        private TabControl m_PagePanel;
         
-        private UserControl m_CurrentPage;
-        private UserControl m_LastPage;
-        private UserControl m_StartPage;
+        private PageBase m_CurrentPage;
+        private PageBase m_LastPage;
+        private PageBase m_StartPage;
 
         /// <summary>
         /// The list of all pages.
         /// Two different pages never have the same name.
         /// </summary>
-        private Dictionary<string, UserControl> m_dictPages;
+        private Dictionary<string, PageBase> m_dictPages;
 
-        internal PageHandler(Panel pagePanel)
+        internal PageHandler(TabControl pagePanel)
         {
             m_PagePanel = pagePanel;
+            m_PagePanel.TabPages.Clear();
 
-            m_dictPages = new Dictionary<string, UserControl>();
+            m_dictPages = new Dictionary<string, PageBase>();
         }
 
         /// <summary>
         /// Return the current visible Page
         /// </summary>
-        public UserControl CurrentPage
+        public TabPage CurrentPage
         {
             get
             {
@@ -43,13 +44,14 @@ namespace TeamConfigurator_2.Services
             }
         }
 
-        public bool CreatePage(string sPageName, UserControl page, bool bIsStartPage = false)
+        public bool CreatePage(string sPageName, PageBase page, bool bIsStartPage = false)
         {
             if(m_dictPages.ContainsKey(sPageName))
             {
                 return false;
             }
 
+            page.Text = sPageName;
             m_dictPages.Add(sPageName, page);
 
             if (bIsStartPage && m_StartPage == null)
@@ -64,15 +66,13 @@ namespace TeamConfigurator_2.Services
         /// <summary>
         /// Return the current visible Page
         /// </summary>
-        private bool ShowPage(UserControl page)
+        private bool ShowPage(PageBase page)
         {
             if (page == null)
             {
                 // just view an empty page
                 page = new PageBase();
-                page.Dock = DockStyle.Fill;
-                m_PagePanel.Controls.Add(page);
-                page.BringToFront();
+                m_PagePanel.SelectedTab = page;
                 m_LastPage = m_CurrentPage;
                 m_CurrentPage = page;
                 return true;
@@ -95,9 +95,10 @@ namespace TeamConfigurator_2.Services
             page.Dock = DockStyle.Fill;
 
             if (!m_PagePanel.Controls.Contains(page))
-                m_PagePanel.Controls.Add(page);
-
-            page.BringToFront();
+            {
+                m_PagePanel.TabPages.Add(page);
+                m_PagePanel.SelectedTab = page;
+            }
 
             m_LastPage = m_CurrentPage;
             m_CurrentPage = page;
