@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeamConfigurator_2.Pages;
+using TeamConfigurator_2.Controls;
 
 namespace TeamConfigurator_2.Services
 {
@@ -15,28 +16,28 @@ namespace TeamConfigurator_2.Services
         /// </summary>
         private TabControl m_PagePanel;
         
-        private PageBase m_CurrentPage;
-        private PageBase m_LastPage;
-        private PageBase m_StartPage;
+        private CustomTabPage m_CurrentPage;
+        private CustomTabPage m_LastPage;
+        private CustomTabPage m_StartPage;
 
         /// <summary>
         /// The list of all pages.
         /// Two different pages never have the same name.
         /// </summary>
-        private Dictionary<string, PageBase> m_dictPages;
+        private Dictionary<string, CustomTabPage> m_dictPages;
 
         internal PageHandler(TabControl pagePanel)
         {
             m_PagePanel = pagePanel;
             m_PagePanel.TabPages.Clear();
 
-            m_dictPages = new Dictionary<string, PageBase>();
+            m_dictPages = new Dictionary<string, CustomTabPage>();
         }
 
         /// <summary>
         /// Return the current visible Page
         /// </summary>
-        public TabPage CurrentPage
+        public CustomTabPage CurrentPage
         {
             get
             {
@@ -51,12 +52,14 @@ namespace TeamConfigurator_2.Services
                 return false;
             }
 
-            page.Text = sPageName;
-            m_dictPages.Add(sPageName, page);
+            CustomTabPage tab = new CustomTabPage(page);
+
+            tab.Text = sPageName;
+            m_dictPages.Add(sPageName, tab);
 
             if (bIsStartPage && m_StartPage == null)
             {
-                m_StartPage = page;
+                m_StartPage = tab;
                 return true;
             }
 
@@ -66,45 +69,33 @@ namespace TeamConfigurator_2.Services
         /// <summary>
         /// Return the current visible Page
         /// </summary>
-        private bool ShowPage(PageBase page)
+        private bool ShowPage(CustomTabPage tab)
         {
-            if (page == null)
+            if (tab == null)
             {
                 // just view an empty page
-                page = new PageBase();
-                m_PagePanel.SelectedTab = page;
+                m_PagePanel.SelectedTab = tab;
                 m_LastPage = m_CurrentPage;
-                m_CurrentPage = page;
+                m_CurrentPage = tab;
                 return true;
             }
 
-            if (page.Equals(m_CurrentPage))
+            if (tab.Equals(m_CurrentPage))
             {
                 return false;
             }
 
-            if (m_CurrentPage != null)
+            if (!m_PagePanel.TabPages.Contains(tab))
             {
-                (m_CurrentPage as IPage).DeactivatePage();
-                if(m_dictPages.ContainsValue(m_CurrentPage))
-                {
-                    // TODO: set button pressed 
-                }
+                m_PagePanel.TabPages.Add(tab);
             }
 
-            page.Dock = DockStyle.Fill;
-
-            if (!m_PagePanel.Controls.Contains(page))
-            {
-                m_PagePanel.TabPages.Add(page);
-            }
-
-            if(m_PagePanel.SelectedTab != page)
-                m_PagePanel.SelectedTab = page;
+            if(m_PagePanel.SelectedTab != tab)
+                m_PagePanel.SelectedTab = tab;
 
             m_LastPage = m_CurrentPage;
-            m_CurrentPage = page;
-            (m_CurrentPage as IPage).ActivatePage();
+            m_CurrentPage = tab;
+            (m_CurrentPage.Page as IPage).ActivatePage();
 
             return true;
         }

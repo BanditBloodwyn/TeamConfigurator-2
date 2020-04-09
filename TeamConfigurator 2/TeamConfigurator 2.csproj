@@ -67,6 +67,12 @@
     <Compile Include="Classes\League.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Team.cs" />
+    <Compile Include="Controls\CustomTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomTabPage.Designer.cs">
+      <DependentUpon>CustomTabPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Navigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
