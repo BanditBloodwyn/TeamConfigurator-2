@@ -97,8 +97,10 @@ namespace TeamConfigurator_2.Services
             if (!m_PagePanel.Controls.Contains(page))
             {
                 m_PagePanel.TabPages.Add(page);
-                m_PagePanel.SelectedTab = page;
             }
+
+            if(m_PagePanel.SelectedTab != page)
+                m_PagePanel.SelectedTab = page;
 
             m_LastPage = m_CurrentPage;
             m_CurrentPage = page;

@@ -52,9 +52,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_PagePanel.Controls.Add(this.tabPage1);
             this.panel_PagePanel.Controls.Add(this.tabPage2);
+            this.panel_PagePanel.HotTrack = true;
             this.panel_PagePanel.Location = new System.Drawing.Point(189, 0);
+            this.panel_PagePanel.Multiline = true;
             this.panel_PagePanel.Name = "panel_PagePanel";
             this.panel_PagePanel.SelectedIndex = 0;
+            this.panel_PagePanel.ShowToolTips = true;
             this.panel_PagePanel.Size = new System.Drawing.Size(977, 648);
             this.panel_PagePanel.TabIndex = 1;
             // 

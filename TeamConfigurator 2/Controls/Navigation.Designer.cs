@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbl_Version = new System.Windows.Forms.Label();
             this.btn_PlayerList = new System.Windows.Forms.Button();
             this.btn_TeamList = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_BuildTeam = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,22 +52,22 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.ChangePage);
             // 
-            // label2
+            // label3
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(-2, 236);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Analysis";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.ChangePage);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-2, 408);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Analysis";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.ChangePage);
             // 
             // lbl_Version
             // 
             this.lbl_Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_Version.AutoSize = true;
-            this.lbl_Version.Location = new System.Drawing.Point(3, 413);
+            this.lbl_Version.Location = new System.Drawing.Point(3, 496);
             this.lbl_Version.Name = "lbl_Version";
             this.lbl_Version.Size = new System.Drawing.Size(48, 13);
             this.lbl_Version.TabIndex = 10;
@@ -92,6 +94,27 @@
             this.btn_TeamList.Text = "Team List";
             this.btn_TeamList.UseVisualStyleBackColor = true;
             this.btn_TeamList.Click += new System.EventHandler(this.ChangePage);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(-2, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(204, 15);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Tools";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_BuildTeam
+            // 
+            this.btn_BuildTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BuildTeam.Location = new System.Drawing.Point(-2, 221);
+            this.btn_BuildTeam.Name = "btn_BuildTeam";
+            this.btn_BuildTeam.Size = new System.Drawing.Size(204, 60);
+            this.btn_BuildTeam.TabIndex = 16;
+            this.btn_BuildTeam.Text = "Build Team";
+            this.btn_BuildTeam.UseVisualStyleBackColor = true;
+            this.btn_BuildTeam.Click += new System.EventHandler(this.ChangePage);
             // 
             // pictureBox2
             // 
@@ -120,15 +143,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.btn_BuildTeam);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_TeamList);
             this.Controls.Add(this.btn_PlayerList);
             this.Controls.Add(this.lbl_Version);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "Navigation";
-            this.Size = new System.Drawing.Size(200, 436);
+            this.Size = new System.Drawing.Size(200, 519);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -139,11 +164,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_Version;
         private System.Windows.Forms.Button btn_PlayerList;
         private System.Windows.Forms.Button btn_TeamList;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_BuildTeam;
     }
 }

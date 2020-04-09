@@ -46,6 +46,13 @@ namespace TeamConfigurator_2.Controls
                 case "label2":
                     break;
 
+                case "btn_BuildTeam":
+                    oParent.ChangePage("Build Team");
+                    break;
+
+                case "label3":
+                    break;
+
                 case "lbl_Version":
                     break;
             }

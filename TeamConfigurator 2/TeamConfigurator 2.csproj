@@ -87,13 +87,19 @@
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageBase.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\PageBase.Designer.cs">
       <DependentUpon>PageBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TeamListPage.cs">
+    <Compile Include="Pages\BuildTeamPage.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\BuildTeamPage.Designer.cs">
+      <DependentUpon>BuildTeamPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TeamListPage.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\TeamListPage.Designer.cs">
       <DependentUpon>TeamListPage.cs</DependentUpon>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BuildTeamPage.resx">
+      <DependentUpon>BuildTeamPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\TeamListPage.resx">
       <DependentUpon>TeamListPage.cs</DependentUpon>

@@ -23,6 +23,7 @@ namespace TeamConfigurator_2
             ms_PageHandler = new PageHandler(panel_PagePanel);
             ms_PageHandler.CreatePage("Team List", new TeamListPage());
             ms_PageHandler.CreatePage("Player List", new PlayerListPage());
+            ms_PageHandler.CreatePage("Build Team", new BuildTeamPage());
         }
 
         public bool ChangePage(string sPageName)
